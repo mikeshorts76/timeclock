@@ -1,18 +1,25 @@
-<div class='panel panel-primary'>
-    
+<div class='panel panel-primary'>    
      <div class='panel-heading'>
         {{pageTitle}}
     </div>
     <div class="panel-body">
-        <div class='row'>
+        <div class='row extra-bottom-padding'>
+            <div class='col-md-12'>
+                Current Status: <strong>{{status}}</strong>
+            </div>
+        </div>
+        <div class='row extra-bottom-padding'>
             <div class='col-md-12'>
                 <button (click)='clockIn()' class="btn btn-primary">Clock In</button>
             </div>
         </div>        
-        <div class='row'>
+        <div class='row extra-bottom-padding'>
             <div class='col-md-12'>
                 <button (click)='clockOut()' class="btn btn-primary">Clock Out</button>
             </div>
+        </div>       
+        <div class='row extra-bottom-padding'>
+            <label *ngIf='message' class='col-md-12'>{{message}}</label>
         </div>
     </div>
 </div>
