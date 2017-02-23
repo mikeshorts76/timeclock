@@ -1,3 +1,7 @@
 .row.extra-bottom-padding{
    margin-bottom: 20px;
 }
+
+.button-width {
+    width: 85px !important;
+}

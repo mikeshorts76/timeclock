@@ -12,8 +12,12 @@ export class ClockComponent implements OnInit {
 
     //methods
     clockIn(): void {
-        var date = new Date();
-        this.message = 'Successfully clocked in at: ' + date; 
+       if (this.status === 'clocked out') {
+            var date = new Date();
+            this.message = 'Successfully clocked in at: ' + date;
+        } else {
+            this.message = "Currently already clocked in";
+        }        
     }
 
     clockOut(): void {
