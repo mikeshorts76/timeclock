@@ -15,6 +15,8 @@ export class ClockComponent implements OnInit {
        if (this.status === 'clocked out') {
             var date = new Date();
             this.message = 'Successfully clocked in at: ' + date;
+
+            this.status = 'clocked in';
         } else {
             this.message = "Currently already clocked in";
         }        
@@ -24,6 +26,8 @@ export class ClockComponent implements OnInit {
         if (this.status === 'clocked in') {
             var date = new Date();
             this.message = 'Successfully clocked out at: ' + date;
+
+            this.status = 'clocked out';
         } else {
             this.message = "Currently already clocked out";
         }        
