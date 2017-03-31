@@ -3,6 +3,11 @@ var router = express.Router();
 // var mongojs = require('mongojs');
 // var db = mongojs('mongodb://admin:admin123@ds037827.mongolab.com:37827/ng2todoapp', ['todos']);
  
+
+router.get('/ping', function(req, res, next) {
+    res.json("pong!");
+});
+
 /* GET All Todos */
 router.get('/timeclock', function(req, res, next) {
     // db.todos.find(function(err, todos) {
@@ -28,8 +33,8 @@ router.get('/todo/:id', function(req, res, next) {
     });
 });
  
-/* POST/SAVE a Todo */
-router.post('/todo', function(req, res, next) {
+/* POST/SAVE ClockIn */
+router.post('/timeclock', function(req, res, next) {
     var todo = req.body;
     if (!todo.text || !(todo.isCompleted + '')) {
         res.status(400);
